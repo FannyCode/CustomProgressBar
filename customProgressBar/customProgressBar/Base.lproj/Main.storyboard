@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="customProgressBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Progress Bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-0m-a1y">
+                                <rect key="frame" x="33.666666666666686" y="47" width="669" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="669" id="hdf-JC-haH"/>
+                                    <constraint firstAttribute="height" constant="72" id="ngf-LF-4Mz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-56-kvL">
+                                <rect key="frame" x="33.666666666666686" y="267" width="669" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BFz-56-kvL" secondAttribute="height" multiplier="223:24" constant="-343.79166666666663" id="LTE-5g-qGe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="AR6-Fd-rjC">
+                                <rect key="frame" x="48" y="188" width="640" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="XAg-BO-3gU"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AR6-Fd-rjC" firstAttribute="top" secondItem="zbZ-0m-a1y" secondAttribute="bottom" constant="69" id="1Tf-P3-xfS"/>
+                            <constraint firstItem="BFz-56-kvL" firstAttribute="top" secondItem="AR6-Fd-rjC" secondAttribute="bottom" constant="59" id="2id-ad-jJR"/>
+                            <constraint firstItem="BFz-56-kvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33.666666666666686" id="6NY-dS-UxM"/>
+                            <constraint firstItem="zbZ-0m-a1y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9dx-Tf-RjB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BFz-56-kvL" secondAttribute="bottom" constant="38" id="9o0-15-TnX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFz-56-kvL" secondAttribute="trailing" constant="33.333333333333258" id="VNw-MQ-e3X"/>
+                            <constraint firstItem="zbZ-0m-a1y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="e6l-op-czZ"/>
+                            <constraint firstItem="AR6-Fd-rjC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="320:207" id="eAB-zY-onn"/>
+                            <constraint firstItem="AR6-Fd-rjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m6U-P5-OfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="BFz-56-kvL" id="9lz-jr-GcZ"/>
+                        <outlet property="progressView" destination="AR6-Fd-rjC" id="1t9-hQ-c1C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.58695652173915" y="137.68115942028987"/>
+        </scene>
+    </scenes>
+</document>
